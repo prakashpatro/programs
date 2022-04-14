@@ -1,0 +1,25 @@
+bool solution(string name) {
+int n, i, count=0;
+n=name.size();
+if(name[0]>47 && name[0]<58)
+return false;
+for(i=0; i<n; i++)
+{
+    if(name[i]==95)
+    count++;
+    
+    else if(name[i]>47 && name[i]<58)
+    count++;
+    
+    else if(name[i]>64 && name[i]<91)
+    count++;
+    
+    else if(name[i]>96 && name[i]<123)
+    count++;
+    
+}
+if(count==n)
+return true;
+
+else return false;
+}

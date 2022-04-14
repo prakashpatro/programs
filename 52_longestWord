@@ -1,0 +1,24 @@
+string solution(string text) {
+string max="", str="";
+int i, n;
+n=text.length();
+for(i=0; i<n; i++)
+{
+  if(text[i]>='a' && text[i]<='z')
+  str=str+text[i];
+  
+  else if(text[i]>='A' && text[i]<='Z')
+  str=str+text[i];  
+  
+  else {
+  if(str.length()>max.length())
+  max=str;
+  str="";
+  }
+  
+}
+if(str.length()>max.length())
+max=str;
+
+return max;
+}

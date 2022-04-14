@@ -1,0 +1,14 @@
+string solution(string inputString) {
+string s;
+int n, i;
+n=inputString.size();
+for(i=0; i<n; i++)
+{
+    if(inputString[i]>47 && inputString[i]<58)
+    s=s+inputString[i];
+    
+    else 
+    break;
+}
+return s;
+}

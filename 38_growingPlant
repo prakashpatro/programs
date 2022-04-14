@@ -1,0 +1,11 @@
+int solution(int upSpeed, int downSpeed, int desiredHeight) {
+int height=0, i=0;
+while(height<desiredHeight)
+{
+    if(height>0)
+    height=height-downSpeed;
+    i++;
+    height=height+upSpeed;
+}
+return i;
+}

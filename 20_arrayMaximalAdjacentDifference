@@ -1,0 +1,11 @@
+int solution(vector<int> inputArray) {
+int n, i, diff=0, t;
+n=inputArray.size();
+for(i=0; i<n-1; i++)
+{
+    t=abs(inputArray[i]-inputArray[i+1]);
+    if(t>diff)
+    diff=t;
+}
+return diff;
+}

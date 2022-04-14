@@ -1,0 +1,21 @@
+vector<string> solution(vector<string> picture) {
+    int n, i, k; 
+    string str="";
+    n=picture.size();
+    k=picture[0].size();
+    
+    for(i=0; i<k+2; i++)
+    str=str+'*';
+   
+    
+    for(i=0; i<n; i++)
+    {
+        picture[i].insert(k, 1, '*');
+        picture[i].insert(0, 1, '*');
+    }
+    
+    picture.insert(picture.begin()+n , str);
+    picture.insert(picture.begin() , str);
+    
+    return picture;
+}

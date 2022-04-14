@@ -1,0 +1,23 @@
+vector<string> solution(vector<string> names) {
+set<string>s;
+for(int i=0;i<names.size();i++)
+{
+    if(s.find(names[i])==s.end())
+    {
+        s.insert(names[i]);
+        continue;
+    }
+    for(int j=1;j<=names.size();j++)
+    {
+        string name=names[i]+"("+to_string(j)+")";
+        if(s.find(name)!=s.end())
+        {
+            continue;
+        }
+        names[i]=name;
+        s.insert(name);
+        break;
+    }
+}
+return names;
+}

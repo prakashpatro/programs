@@ -1,0 +1,4 @@
+int solution(string s) {
+set <char> a(begin(s), end(s));
+return a.size();
+}

@@ -1,0 +1,17 @@
+int solution(vector<int> inputArray, int k) {
+int sum, max, n, i;
+n=inputArray.size();
+max=0;
+sum=0;
+for(i=0; i<n; i++)
+{
+    sum=sum+inputArray[i];
+    
+    if(i>k-1)
+    sum=sum-inputArray[i-k];
+    
+    if(sum>max)
+    max=sum;
+}
+return max;
+}

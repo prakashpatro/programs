@@ -1,0 +1,16 @@
+int solution(vector<int> statues) {
+    int k, i, j, max, min;
+    k=statues.size();
+    max=statues[0];
+    min=statues[0];
+    for(i=1; i<k; i++)
+    {
+        if(statues[i]>max)
+        max=statues[i];
+        else if(statues[i]<min)
+        min=statues[i];
+    }
+    j=(max-min)+1;
+    j=j-k;
+    return j;
+}

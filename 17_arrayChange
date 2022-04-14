@@ -1,0 +1,17 @@
+int solution(vector<int> inputArray) {
+int m, a, sum=0, i, k;
+m=inputArray.size();
+a=inputArray[0];
+for(i=1 ; i<m; i++)
+{
+   if (inputArray[i]<=a)
+   {
+        k=((a-inputArray[i])+1);
+        sum=sum+k;
+        a=inputArray[i]+k;
+   }
+   else 
+   a=inputArray[i];
+}
+return sum;
+}

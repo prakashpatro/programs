@@ -1,0 +1,21 @@
+int solution(vector<int> a) {
+int n, i, j, k, x, sum, min;
+
+n=a.size();
+sort(a.begin(), a.end());
+for(i=0; i<n; i++)
+{
+    sum=0;
+    x=a[i];
+    for(j=0; j<n; j++)
+    {
+        sum=sum+abs(a[j]-x);
+    }
+        if(sum<min)
+        {
+            min=sum;
+            k=a[i];
+        }
+}
+    return k;
+}

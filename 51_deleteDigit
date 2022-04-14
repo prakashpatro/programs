@@ -1,0 +1,12 @@
+int solution(int n) {
+int num, i, max, a;
+max=0;
+
+for(i=1; i< n; i=i*10)
+{
+    max= std::max(n/10/i *i + n%i, max);
+    
+}
+
+return max;
+}

@@ -1,0 +1,21 @@
+int solution(vector<vector<int>> matrix) {
+int i, j, k, l, m, sum=0;
+i=matrix.size();
+j=matrix[0].size();
+for(k=0; k<i; k++)
+{
+    for(l=0; l<j; l++)
+    {
+        if(matrix[k][l]==0)
+       {
+           for(m=k+1; m<i; m++)
+           matrix[m][l]=0;
+       }
+       else 
+       {
+           sum=sum+matrix[k][l];
+       }  
+    }  
+}
+return sum;
+}

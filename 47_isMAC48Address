@@ -1,0 +1,25 @@
+bool solution(string inputString) {
+int n, i, j, flag=0;
+n=inputString.size();
+if(n!=17)
+return false;
+
+for(i=2; i<n; i=i+3 )
+{
+    if(inputString[i]!='-')
+    return false;
+}
+
+for(i=0; i<n; i=i+3)
+{
+    for(j=i; j<i+2; j++)
+    {
+        if(inputString[j]<47 || inputString[j]>58)
+        {
+            if(inputString[j]<'A' || inputString[j]>'F')
+            return false;
+        }
+    }
+}
+return true;
+}

@@ -1,0 +1,26 @@
+int solution(vector<int> votes, int k) {
+int n, i, f, count=0;
+n=votes.size();
+sort(votes.begin(),votes.end());
+f=votes[n-1]-k;
+if(k==0)
+{
+    for(i=0; i<n-1; i++)
+    {
+        if(votes[i]==f)
+        {
+           return 0; 
+        }
+    }
+    return 1;
+}
+else {
+
+for(i=0; i<n; i++)
+{
+    if(votes[i]>f)
+    count++;
+}
+return count;
+}
+}

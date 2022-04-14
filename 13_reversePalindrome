@@ -1,0 +1,20 @@
+string solution(string inputString) {
+ int i, j, l, p;
+    
+    l=inputString.size();
+    for(i=l; i>=0; i--)
+    {
+        if(inputString[i]=='(')
+        {
+            p=i;
+            inputString.erase(inputString.begin()+i);
+            while(inputString[p]!=')')
+            {
+                p++;
+            }
+            inputString.erase(inputString.begin()+p);
+            reverse(inputString.begin()+i, inputString.end()-(inputString.size()-p));
+        }
+    }
+    return inputString;
+}

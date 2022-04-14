@@ -1,0 +1,24 @@
+string solution(string st) {
+int n, i, j, k;
+string str = string(st.rbegin(), st.rend());
+n=st.size();
+
+if(st==str)
+return st;
+else 
+{
+
+for(i=0; i<n; i++)
+{
+   string s=st;
+   for(j=i; j>=0; j--)
+   {
+       s=s+st[j];
+   }
+   string str = string(s.rbegin(), s.rend());
+   if(str==s)
+   return str;
+}
+
+}
+}

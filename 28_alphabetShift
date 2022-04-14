@@ -1,0 +1,12 @@
+string solution(string inputString) {
+int n, i;
+n=inputString.size();
+for(i=0; i<n; i++)
+{
+    if(inputString[i]==122)
+    inputString[i]=97;
+    else
+    inputString[i]=inputString[i]+1;
+}
+return inputString;
+}

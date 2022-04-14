@@ -1,0 +1,25 @@
+vector<vector<int>> solution(vector<vector<int>> image) {
+vector<vector<int>> box;
+
+int n, m, i, j, t, l, num;
+n=image.size();
+m=image[0].size();
+
+for(i=0; i<n-2; i++)
+{
+    vector<int> r;
+    for(j=0; j<m-2; j++)
+    {
+        num=0;
+        for(t=i; t<i+3; t++)
+        {
+            for(l=j; l<j+3; l++)
+            num=num+(image[t][l]);
+        }
+        
+        r.push_back(num/9);
+    }
+    box.push_back(r);
+}
+return box;
+}

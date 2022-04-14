@@ -1,0 +1,10 @@
+bool solution(string time) {
+int n=0;
+n=n*10 + time[0]-'0';
+n=n*10 + time[1]-'0';
+
+if(n<24 && time[3]<'6')
+return true;
+
+else return false;
+}

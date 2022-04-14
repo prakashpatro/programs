@@ -1,0 +1,7 @@
+bool solution(char symbol) {
+if(symbol>47 && symbol<58)
+return true;
+else {
+return false;
+}
+}

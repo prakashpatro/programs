@@ -1,0 +1,63 @@
+vector<vector<int>> solution(vector<vector<bool>> matrix) {
+vector<vector<int>> mine;
+int n, i, m, j, t, l, a, b, count;
+m=matrix.size();
+n=matrix[0].size();
+for(i=0; i<m; i++)
+{
+    vector<int> r;
+    for(j=0; j<n; j++)
+    {
+        count=0;
+            
+            t=i-1;
+            l=j-1;
+            a=i+1;
+            b=j+1;
+            if(t>=0)
+            {
+                if(matrix[t][j]==true)
+                count++;
+            }
+            if(t>=0 && b<n)
+            {
+                if(matrix[t][b]==true)
+                count++;
+            }
+            if(b<n)
+            {
+                if(matrix[i][b]==true)
+                count++;
+            }
+            if(l>=0)
+            {
+                if(matrix[i][l]==true)
+                count++;
+            }
+            
+            if(a<m && matrix[a][j]==true)
+            count++;
+                
+            if(a<m && l>=0)
+            {
+                if(matrix[a][l]==true)
+                count++;
+            }
+            
+            if(a<m && b<n)
+            {
+                if(matrix[a][b]==true)
+                count++;
+            }
+            
+            if(t>=0 && l>=0)
+            {
+                if(matrix[t][l]==true)
+                count++;
+            }
+        r.push_back(count);
+    }
+    mine.push_back(r);
+}
+return mine;
+}

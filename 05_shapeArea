@@ -1,0 +1,7 @@
+int solution(int n) {
+int i, k;
+k=n*n;
+for(i=0; i<n-1; i++)
+k=k+n-1;
+return k;
+}

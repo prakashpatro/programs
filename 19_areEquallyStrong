@@ -1,0 +1,27 @@
+bool solution(int yourLeft, int yourRight, int friendsLeft, int friendsRight) {
+int ya, yb, fa, fb;
+if(yourLeft>=yourRight)
+{
+    ya=yourLeft;
+    yb=yourRight;
+}
+else 
+{
+    ya=yourRight;
+    yb=yourLeft;
+}
+if(friendsLeft>=friendsRight)
+{
+    fa=friendsLeft;
+    fb=friendsRight;
+}
+else
+{
+    fa=friendsRight;
+    fb=friendsLeft;
+}
+if(ya==fa && yb==fb)
+return true;
+
+else return false;
+}

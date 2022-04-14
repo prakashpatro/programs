@@ -1,0 +1,14 @@
+bool solution(string bishop, string pawn) {
+int a, b, c, d, t;
+a=bishop[0]-'a';
+b=bishop[1]-'0';
+c=pawn[0]-'a';
+d=pawn[1]-'0';
+
+t=abs(a-c);
+
+if(t==abs(b-d))
+return true;
+
+else return false;
+}

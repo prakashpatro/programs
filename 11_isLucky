@@ -1,0 +1,23 @@
+bool solution(int n) {
+int k, l=0, i=0, m=0, j;
+int num=n;
+while(n!=0)
+{
+    n=n/10;
+    i++;
+}
+j=i/2;
+for(k=0; k<j; k++)
+{
+    l=l+(num%10);
+    num=num/10;
+}
+for(k=i/2; k<=i; k++)
+{
+    m=m+(num%10);
+    num=num/10;   
+}
+if(m==l)
+return true;
+else return false;
+}

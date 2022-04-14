@@ -1,0 +1,11 @@
+int solution(int deposit, int rate, int threshold) {
+int t=0;
+float k, var=deposit;
+while(var<threshold)
+{
+    t++;
+    k=rate/100.0;
+    var=var*(1.0+k);
+}
+return t;
+}

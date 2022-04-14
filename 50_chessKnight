@@ -1,0 +1,39 @@
+int solution(string cell) {
+int a, b, i, j, l, m, count=0;
+a=cell[0]-'a';
+b=cell[1]-'1';
+
+if(a+1>=0 && b+2>=0)
+if(a+1<=7 && b+2<=7)
+count++;
+
+if(a+1>=0 && b-2>=0)
+if(a+1<=7 && b-2<=7)
+count++;
+
+if(a-1>=0 && b+2>=0)
+if(a-1<=7 && b+2<=7)
+count++;
+
+if(a-1>=0 && b-2>=0)
+if(a-1<=7 && b-2<=7)
+count++;
+
+if(a+2>=0 && b+1>=0)
+if(a+2<=7 && b+1<=7)
+count++;
+
+if(a+2>=0 && b-1>=0)
+if(a+2<=7 && b-1<=7)
+count++;
+
+if(a-2>=0 && b+1>=0)
+if(a-2<=7 && b+1<=7)
+count++;
+
+if(a-2>=0 && b-1>=0)
+if(a-2<=7 && b-1<=7)
+count++;
+
+return count;
+}

@@ -1,0 +1,19 @@
+int solution(string inputString) {
+int n, i, k, sum=0;
+n=inputString.length();
+k=0;
+for(i=0; i<n; i++)
+{
+    if(inputString[i]>47 && inputString[i]<=57)
+    {
+        k=k*10 + inputString[i]-'0';
+    }
+    else
+    {
+        sum=sum+k;
+        k=0;
+    }
+}
+sum=sum+k;
+return sum;
+}

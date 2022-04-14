@@ -1,0 +1,11 @@
+bool solution(int n) {
+int t;
+while(n!=0)
+{
+    t=n%10;
+    if(t%2!=0)
+    return false;
+    n=n/10; 
+}
+return true;
+}

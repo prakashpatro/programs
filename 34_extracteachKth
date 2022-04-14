@@ -1,0 +1,12 @@
+vector<int> solution(vector<int> inputArray, int k) {
+vector<int>::iterator it;
+int n;
+n=inputArray.size();
+
+for(auto it=inputArray.begin()+k-1; it<inputArray.end(); it=it+k-1)
+{
+    inputArray.erase(it);    
+}
+
+return inputArray;
+}

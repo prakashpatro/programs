@@ -1,0 +1,46 @@
+bool solution(string cell1, string cell2) {
+int x1, y1, x2, y2, a, b;
+x1=cell1[0]-65;
+y1=cell1[1]-'0';
+x2=cell2[0]-65;
+y2=cell2[1]-'0';
+
+if(x1%2==0)
+{
+    if(y1%2==0)
+    a=1;
+    
+    else 
+    a=2;
+}
+
+else
+{
+    if(y1%2==0)
+    a=2;
+    
+    else a=1;
+}
+
+if(x2%2==0)
+{
+    if(y2%2==0)
+    b=1;
+    
+    else 
+    b=2;
+}
+
+else
+{
+    if(y2%2==0)
+    b=2;
+    
+    else b=1;
+}
+
+if(a==b)
+return true;
+
+else return false;
+}
